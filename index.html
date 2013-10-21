@@ -17,14 +17,19 @@
         media = calculo.media.value;
         media = parseFloat(media);
         final = 12.5 - (media * 1.5);
-        if (media < 3.5) {
-            document.getElementById("msg").innerHTML = "Você foi reprovado!";
-        }
-        else if (media >= 7){
-            document.getElementById("msg").innerHTML = "Vá para a praia! Um milagre aconteceu e você passou!";
+        if (media >= 0 && media <= 10){
+            if (media < 3.5) {
+                document.getElementById("msg").innerHTML = "Você foi reprovado!";
+            }
+            else if (media >= 7){
+                document.getElementById("msg").innerHTML = "Vá para a praia! Um milagre aconteceu e você passou!";
+            }
+            else {
+                document.getElementById("msg").innerHTML = "Você foi para a final! Para se salvar, precisa tirar " + final.toFixed(2);
+            }
         }
         else {
-            document.getElementById("msg").innerHTML = "Você foi para a final! Para se salvar, precisa tirar " + final.toFixed(2);
+            document.getElementById("msg").innerHTML = "Digite uma nota entre 0 e 10!";
         }
     }
   </script>
@@ -45,10 +50,10 @@
 
     <div data-role="content">
       <form name="calculo">
-         <label for="media">Sua média:</label>
+         <label for="media">Digite a média da disciplina:</label>
          <input data-clear-btn="true" name="media" id="media" value="" type="number" min="0" max="10" step="0.1">
          <p>
-           <input type="button" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-theme="a" value="Calcular" onclick="javascript:calcular();" />
+           <a href="#" data-role="button" data-icon="check" data-theme="a" onclick="calcular()">Calcular</a>
          </p>
       </form>
       <p id="msg"></p>
