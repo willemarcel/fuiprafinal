@@ -19,26 +19,31 @@
         final = 12.5 - (media * 1.5);
         if (media >= 0 && media <= 10){
             if (media < 3.5) {
-                document.getElementById("msg").innerHTML = "Você foi reprovado!";
+                document.getElementById("msg").innerHTML = "<p class=center>Você foi</p><p class=center><span class=nota>reprovado!</span></p>";
             }
             else if (media >= 7){
-                document.getElementById("msg").innerHTML = "Vá para a praia! Um milagre aconteceu e você passou!";
+                document.getElementById("msg").innerHTML = "<p class=center>Parabéns! Você estudou e</p><p class=center><span class=nota>passou!</span></p>";
             }
             else {
-                document.getElementById("msg").innerHTML = "Você foi para a final! Para se salvar, precisa tirar " + final.toFixed(2);
+                document.getElementById("msg").innerHTML = "<p class=center>Você precisa tirar</p><p class=center><span class=nota>" + final.toFixed(2) + "</span></p><p class=center>na prova final.</p>";
             }
         }
         else {
-            document.getElementById("msg").innerHTML = "Digite uma nota entre 0 e 10!";
+            document.getElementById("msg").innerHTML = "<p class=center>Digite uma nota entre</p><p class=center><span class=nota>0 e 10!</span></p>";
         }
     }
+        function formReset()
+		{
+			document.getElementById("calculo").reset();
+			document.getElementById("msg").innerHTML = "";
+		}    
   </script>
 
 </head>
 
 <body>
 
-  <div data-role="page" id="home" data-theme="a">
+  <div data-role="page" id="home" data-url="home" data-theme="a">
 
     <div data-role="header">
       <h1>
@@ -49,24 +54,23 @@
     </div>
 
     <div data-role="content">
-      <form name="calculo">
+      <form name="calculo" id="calculo">
          <label for="media">Digite a média da disciplina:</label>
-         <input data-clear-btn="true" name="media" id="media" value="" type="number" min="0" max="10" step="0.1">
-         <p>
-           <a href="#" data-role="button" data-icon="check" data-theme="a" onclick="calcular()">Calcular</a>
-         </p>
+         <input name="media" id="media" value="" type="number" min="0" max="10" step="0.1">
+         <a href="#" data-role="button" data-icon="check" data-inline="false" data-theme="a" onclick="calcular()">Calcular</a>
+         <a href="#" data-role="button" data-icon="delete" data-inline="false" data-theme="a" onclick="formReset()">Limpar</a>
       </form>
-      <p id="msg"></p>
-      <p><a href="#about" data-role="button" data-rel="dialog" data-transition="pop" >Sobre</a></p>
+      <p id="msg" data-clear-btn="true"></p>
     </div>
 
     <div data-role="footer" data-position="fixed">
       <h5>Fui pra final!</h5>
+      <a href="#about" data-role="button" class="ui-btn-right" data-icon="info">Sobre</a>
     </div>
 
   </div>
 
-  <div data-role="page" id="about" data-theme="a">
+  <div data-role="page" id="about" data-url="about" data-theme="a">
 
     <div data-role="header">
       <h1>
@@ -79,6 +83,7 @@
     <div data-role="content">
       <p>Fui pra final! é um aplicativo que calcula a nota necessária para o estudante ser aprovado na Prova Final. Inicialmente foi feito para a UFRB, mas queremos fazer versões para outras universidades.</p>
       <p>O aplicativo foi criado por <a href="http://cesarvelame.com">César Velame</a> e <a href="http://wille.blog.br">Wille Marcel</a></p>
+    <a href="#home" data-role="button" data-icon="back" data-inline="false" data-theme="a">Voltar</a>
     </div>
 
     <div data-role="footer" data-position="fixed">

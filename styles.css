@@ -2,4 +2,9 @@
   max-width: 400px;
   width: 100%;
 }
-
+.nota {
+  font-size:4em;
+}
+.center{
+  text-align:center;
+}
