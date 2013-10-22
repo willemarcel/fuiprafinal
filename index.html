@@ -9,34 +9,7 @@
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-
-  <script language="javascript">
-    function calcular(){
-        var media, final;
-        media = calculo.media.value;
-        media = parseFloat(media);
-        final = 12.5 - (media * 1.5);
-        if (media >= 0 && media <= 10){
-            if (media < 3.5) {
-                document.getElementById("msg").innerHTML = "<p class=center>Você foi</p><p class=center><span class=nota>reprovado!</span></p>";
-            }
-            else if (media >= 7){
-                document.getElementById("msg").innerHTML = "<p class=center>Parabéns! Você estudou e</p><p class=center><span class=nota>passou!</span></p>";
-            }
-            else {
-                document.getElementById("msg").innerHTML = "<p class=center>Você precisa tirar</p><p class=center><span class=nota>" + final.toFixed(2) + "</span></p><p class=center>na prova final.</p>";
-            }
-        }
-        else {
-            document.getElementById("msg").innerHTML = "<p class=center>Digite uma nota entre</p><p class=center><span class=nota>0 e 10!</span></p>";
-        }
-    }
-        function formReset()
-		{
-			document.getElementById("calculo").reset();
-			document.getElementById("msg").innerHTML = "";
-		}
-  </script>
+  <script src="fuiprafinal.js"></script>
 
 </head>
 
@@ -92,13 +65,13 @@
   </div>
 
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-45050700-1', 'fuiprafinal.tk');
-  ga('send', 'pageview');
+    ga('create', 'UA-45050700-1', 'fuiprafinal.tk');
+    ga('send', 'pageview');
   </script>
 </body>
 </html>
