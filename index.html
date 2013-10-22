@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html manifest="fuiprafinal.manifest">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,6 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
   <script src="fuiprafinal.js"></script>
-
 </head>
 
 <body>
@@ -19,16 +18,16 @@
 
     <div data-role="header">
       <h1>
-        <a href="#home">
+        <a href="">
           <img id="logo" src="images/logo.png" alt="Logo" />
         </a>
       </h1>
     </div>
 
     <div data-role="content">
-      <form name="calculo" id="calculo">
-         <input label="media" id="media" value="" type="number" min="0" max="10" step="0.1" placeholder="Sua média na disciplina">
-         <a href="#" data-role="button" data-icon="check" data-inline="false" data-theme="a" onclick="calcular()">Calcular</a>
+      <form name="calculo" id="calculo" action="javascript:calcular();" method="get">
+        <input label="media" id="media" value="" type="number" min="0" max="10" step="0.1" placeholder="Sua média na disciplina">
+        <input type="submit" value = "Calcular" data-icon="check" />
          <a href="#" data-role="button" data-icon="delete" data-inline="false" data-theme="a" onclick="formReset()">Limpar</a>
       </form>
       <p id="msg" data-clear-btn="true"></p>
