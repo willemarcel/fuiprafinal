@@ -12,4 +12,5 @@
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #222222!important;
 }
-
+#navgroup {text-align:center;}
+#navgroup div {display:inline-block;}
