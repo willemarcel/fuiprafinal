@@ -24,10 +24,10 @@ function msgReprovado() {
         "Você deveria ter estudado mais... Está",
         "Agora é tarde pra se arrepender, você está",
         "Você já deveria saber que com essa nota você está",
-        "Se você aprendeu algo na disciplina, <br />guarde que vai precisar no próximo semestre, <br />pois você foi",
+        "Se você aprendeu algo na disciplina, <br />use no próximo semestre. <br />Você foi",
         "A boa notícia é que você não vai precisar fazer prova final. <br />A péssima é que você está",
         ];
-    document.getElementById("msg").innerHTML = "<p class=center>" + frases[getRandomInt(0, frases.length)] + "</p><p class=center><span class=nota>reprovado!</span></p>";
+    document.getElementById("msg").innerHTML = "<p class=center>" + frases[getRandomInt(0, frases.length - 1)] + "</p><p class=center><span class=nota>reprovado!</span></p>";
 }
 
 function msgProvaFinal(final) {
