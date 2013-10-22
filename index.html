@@ -10,6 +10,7 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
   <script src="fuiprafinal.js"></script>
+   <link rel="stylesheet" href="jqm-icon-pack-2.0-original.css" />
   <link rel="apple-touch-icon" href="images/iphone.png" />
   <link rel="shortcut icon" href="images/favicon.ico" >
 </head>
@@ -36,8 +37,13 @@
     </div>
 
     <div data-role="footer" data-position="fixed" data-theme="b">
-      <h5>Fui pra Final!</h5>
-      <a href="#about" data-role="button" class="ui-btn-right" data-icon="info">Sobre</a>
+		<div id="navgroup">
+			<div data-role="controlgroup" data-type="horizontal">
+			  <a href="#about" data-role="button" data-icon="info">Sobre</a>
+			  <a href="https://www.facebook.com/sharer/sharer.php?u=fuiprafinal.tk" data-role="button" data-icon="facebook" data-theme="b">Compartilhar</a>
+			  <a href="http://twitter.com/share?text=Fui pra Final!&url=http://fuiprafinal.tk" data-role="button" data-icon="twitter" data-theme="b">Tweetar</a>
+			</div>
+		</div>
     </div>
 
   </div>
@@ -57,7 +63,7 @@
       <p>O aplicativo foi criado por <a href="http://cesarvelame.com">César Velame</a> e <a href="http://wille.blog.br">Wille Marcel</a>.</p>
       <p>Esse aplicativo é Software Livre, licenciado sob a licença GNU GPLv2. O código fonte está disponível no <a href="https://github.com/willemarcel/fuiprafinal">GitHub</a>. Fork us!</p>
       <a href="#home" data-role="button" data-icon="back" data-inline="false" data-theme="b">Voltar</a>
-   </div>
+	</div>
 
     <div data-role="footer" data-position="fixed" data-theme="b">
       <h5>Fui pra Final!</h5>
