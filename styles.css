@@ -4,7 +4,12 @@
 }
 .nota {
   font-size:3.5em;
+  font-decoration: bold;
 }
 .center{
   text-align:center;
 }
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #222222!important;
+}
+
