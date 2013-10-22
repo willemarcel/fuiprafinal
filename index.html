@@ -14,9 +14,9 @@
 
 <body>
 
-  <div data-role="page" id="home" data-url="home" data-theme="a">
+  <div data-role="page" id="home" data-url="home" data-theme="b">
 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
       <h1>
         <a href="">
           <img id="logo" src="images/logo.png" alt="Logo" />
@@ -28,21 +28,21 @@
       <form name="calculo" id="calculo" action="javascript:calcular();" method="get">
         <input label="media" id="media" value="" type="number" min="0" max="10" step="0.1" placeholder="Sua média na disciplina">
         <input type="submit" value = "Calcular" data-icon="check" />
-         <a href="#" data-role="button" data-icon="delete" data-inline="false" data-theme="a" onclick="formReset()">Limpar</a>
+         <a href="#" data-role="button" data-icon="delete" data-inline="false" data-theme="b" onclick="formReset()">Limpar</a>
       </form>
       <p id="msg" data-clear-btn="true"></p>
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" data-theme="b">
       <h5>Fui pra final!</h5>
       <a href="#about" data-role="button" class="ui-btn-right" data-icon="info">Sobre</a>
     </div>
 
   </div>
 
-  <div data-role="page" id="about" data-url="about" data-theme="a">
+  <div data-role="page" id="about" data-url="about" data-theme="b">
 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
       <h1>
         <a href="#home">
           <img id="logo" src="images/logo.png" alt="Logo" />
@@ -54,10 +54,10 @@
       <p>Fui pra final! é um aplicativo que calcula a nota necessária para o estudante ser aprovado na Prova Final. Inicialmente foi feito para a UFRB, mas queremos fazer versões para outras universidades.</p>
       <p>O aplicativo foi criado por <a href="http://cesarvelame.com">César Velame</a> e <a href="http://wille.blog.br">Wille Marcel</a></p>
       <p>Esse aplicativo é Software Livre, licenciado sob a licença GNU GPLv2. O código fonte está disponível no <a href="https://github.com/willemarcel/fuiprafinal">GitHub</a>. Fork us!</p>
-    <a href="#home" data-role="button" data-icon="back" data-inline="false" data-theme="a">Voltar</a>
+    <a href="#home" data-role="button" data-icon="back" data-inline="false" data-theme="b">Voltar</a>
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" data-theme="b">
       <h5>Fui pra final!</h5>
     </div>
 
