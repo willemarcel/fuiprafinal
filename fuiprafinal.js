@@ -2,7 +2,6 @@ function calcular() {
     var media, final;
     media = calculo.media.value.replace(",", ".");
     media = parseFloat(media);
-    final = 12.5 - (media * 1.5);
     if (media >= 0 && media <= 10) {
         if (media < 3.5) {
             msgReprovado();
@@ -11,6 +10,7 @@ function calcular() {
             document.getElementById("msg").innerHTML = "<p class=center>Parabéns! Você estudou e</p><p class=center><span class=nota>passou!</span></p>";
         }
         else {
+            final = 12.5 - (media * 1.5);
             msgProvaFinal(final);
         }
     }
