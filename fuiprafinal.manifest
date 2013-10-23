@@ -1,0 +1,31 @@
+{
+  "version": "1.3",
+  "name": "Fui pra final!",
+  "description": "Um aplicativo que ajuda os estudantes a saber a nota necessária para ser aprovado na prova final de uma disciplina.",
+  "icons": {
+    "16": "/images/logo-16.png",
+    "48": "/images/logo-48.png",
+    "128": "/images/logo-128.png"
+  },
+  "developer": {
+    "name": "César Velame & Wille Marcel",
+    "url": "https://github.com/willemarcel/fuiprafinal"
+  },
+  "installs_allowed_from": ["*"],
+  "appcache_path": "/cache.manifest",
+  "locales": {
+    "en": {
+      "description": "An app that help brazilian students to know the score they need in the final academic exam.",
+      "developer": {
+        "url": "http://fuiprafinal.tk/"
+      }
+    },
+    "es": {
+      "description": "Una aplicación que ayuda los estudantes brazileños a saber la nota que necessitán en la evaluación final de una clase de la universidad.",
+      "developer": {
+        "url": "http://fuiprafinal.tk/"
+      }
+    }
+  },
+  "default_locale": "pt"
+}
